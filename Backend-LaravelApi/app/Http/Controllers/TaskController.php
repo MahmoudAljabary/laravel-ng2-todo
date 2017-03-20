@@ -31,7 +31,12 @@ class TaskController extends Controller {
         if (!$task) {
             return response()->json(['message' => 'Task was not found'], 404);
         }
-        $task->body = $request->input('body');
+        $body = $request->input('body');
+        if ($body) {
+            $task->body = $body;
+        }
+        $task->completed = $request->input('completed');
+
         $task->save();
         return response()->json(['task' => $task], 200);
     }
