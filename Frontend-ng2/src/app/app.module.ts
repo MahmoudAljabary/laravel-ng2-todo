@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { routing } from './app.routing';
 import { TaskService } from './task.service';
@@ -14,7 +13,6 @@ import { TaskService } from './task.service';
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskComponent,
     NewTaskComponent
   ],
   imports: [

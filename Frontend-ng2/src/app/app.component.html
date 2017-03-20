@@ -1,11 +1,11 @@
-<h1>
-    {{title}}
-</h1>
 <div id="app">
     <div class="container">
+        <h1>{{title}}</h1>
         <div class="row">
-            <a href="#">Tasks</a>
-            <a href="#">New task</a>
+            <ul class="nav nav-tabs">
+                <li><a href="#" [routerLink]="['/']">Tasks</a></li>
+                <li><a href="#" [routerLink]="['/new-task']">New task</a></li>
+            </ul>
         </div>
         <div class="row">
             <router-outlet>

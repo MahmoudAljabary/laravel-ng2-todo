@@ -1,1 +1,13 @@
-<app-task *ngFor="let task of tasks" [task]="task"></app-task>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of tasks">
+        <input class="toggle" type="checkbox"
+           (click)="completeTask(task)"
+           [checked]="task.completed"/>
+
+        <div [ngClass]="{strikethrough: task.completed}">{{task.body}}</div>
+
+        <button (click)="onDelete(task)">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </li>
+</ul>
